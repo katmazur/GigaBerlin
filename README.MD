@@ -16,6 +16,7 @@ Please try to start your automation using Google as a starting point and try to 
 - Git [ http://git-scm.com/downloads ]
 - Chrome browser
 - Firefox browser 
+- Safari browser
 - Selenide  [ https://selenide.org/quick-start.html ]
 - TestNG [ https://testng.org/doc/download.html ]
 
