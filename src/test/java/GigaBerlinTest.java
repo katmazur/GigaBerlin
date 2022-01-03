@@ -4,6 +4,9 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 import com.codeborne.selenide.Configuration;
+
+import java.util.Objects;
+
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -40,6 +43,9 @@ public class GigaBerlinTest {
         //9. Open new tab with Google Maps
         WebDriverRunner.getWebDriver().switchTo().newWindow(WindowType.TAB);
         GoogleMapsPage googleMapsPage = open(GoogleMapsPage.googleMapsUrl, GoogleMapsPage.class);
+        if (Configuration.browser.equals("safari")) {
+            googleMapsPage.acceptMapCookies();
+        }
 
         //10. Search for saved coordinates
         googleMapsPage.searchForCoordinates(coordinates);

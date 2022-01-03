@@ -22,9 +22,14 @@ public class GoogleMapsPage {
     }
 
     public SelenideElement getFoundedAddress() {
-        SelenideElement address = $("button[jsaction='pane.clickPhoneNumber']+*").should(Condition.exist);
-        return address;
+        return $("button[jsaction='pane.clickPhoneNumber']+*").should(Condition.exist);
 
+    }
+
+    public void acceptMapCookies() {
+        $("button[aria-label]")
+                .should(Condition.exist)
+                .click();
     }
 
 }
