@@ -26,10 +26,12 @@ public class GoogleMapsPage {
 
     }
 
-    public void acceptMapCookies() {
-        $("button[aria-label]")
-                .should(Condition.exist)
-                .click();
+    public void ifSafari() {
+        if (Configuration.browser.equals("safari")) {
+            $("button[aria-label]")
+                    .should(Condition.exist)
+                    .click();
+        }
     }
 
 }

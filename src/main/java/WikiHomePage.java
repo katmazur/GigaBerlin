@@ -1,7 +1,6 @@
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
-import java.lang.invoke.SwitchPoint;
-import static com.codeborne.selenide.Selenide.$;
+
 import static com.codeborne.selenide.Selenide.page;
 
 public class WikiHomePage {
